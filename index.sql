@@ -70,16 +70,16 @@ INSERT INTO `marque` (`id_marque`, `nom`, `logo`) VALUES
 
 
 INSERT INTO `chaussures` (`id_chaussure`, `id_marque`, `taille`, `couleur`, `prix`, `nom_chaussure`) VALUES
-(1, 3, 39, 'blanche', 65000, 'ADENCO'),
-(2, 1, 40, 'bleu', 35000, 'SPARCO'),
-(3, 2, 42, 'violet', 50000, 'NIKE ZOOM');
+(1, 3, 39, 'blanche', 65000, 'Nike'),
+(2, 1, 40, 'bleu', 35000, 'Adidas'),
+(3, 2, 42, 'violet', 50000, 'Vans');
 
 
--- LISTE LES MARQUES CONTENUS DANS DANS LA TABLES CHAUSSURES
-SELECT marque FROM marque;
+-- Liste des marques qui existent dans la table marque 
+SELECT * FROM marque;
 
--- SUPPRIME LA CHASSURE DE MARQUE SPARCO
+-- Supprimer la chaussure de marque Nike 
 DELETE FROM chaussures WHERE id_chaussure = 1;  
 
--- MISE A JOUR LA CHASSURE DE MARQUE SPARCO
-UPDATE chaussures SET nom_chaussure = 'ADENCO2' WHERE idxChaussure = 2;
+-- Mise à jour de la couleur de la chaussure de la marque Adidas
+UPDATE chaussures SET couleur = 'verte' WHERE id_chaussure = 2;
